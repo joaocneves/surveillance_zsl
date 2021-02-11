@@ -1,0 +1,15 @@
+
+Reads the soft biometric labels of the LFW Soft Biometrics Dataset (http://atvs.ii.uam.es/atvs/LFW_SoftBiometrics.html)
+
+FUNCTION
+load_lfwsoft_manual_annot(annot_file_path):
+OUTPUT
+manual_soft_biom[img_name_1.jpg] -> [att_1 att_2 att_3 ... att_n]
+
+FUNCTION
+load_lfwsoft_data(annot_file_path)
+OUTPUT
+lfwsoft_data[0] = [person_id, person_name, img_name . [att_1 att_2 att_3 ... att_k]]
+lfwsoft_data[1] = [person_id, person_name, img_name . [att_1 att_2 att_3 ... att_k]]
+...
+lfwsoft_data[N] = [person_id, person_name, img_name . [att_1 att_2 att_3 ... att_k]]
