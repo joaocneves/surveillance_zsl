@@ -3,7 +3,7 @@ from sklearn.metrics import accuracy_score
 from scipy.spatial import distance_matrix
 from load_lfwsoft_annot_lib import load_lfwsoft_annot_per_id
 
-def create_geallery_probe_sets(id2feat):
+def create_gallery_probe_sets(id2feat):
 
     gallery_id = []
     gallery_feats = []
@@ -30,11 +30,11 @@ def create_geallery_probe_sets(id2feat):
     return gallery_id, gallery_feats, probe_id, probe_feats
 
 
-MANUAL_ANNOT_FILE_PATH = 'E:\\lfw_softbiometrics\\files\\LFW_ManualAnnotations.txt'
+MANUAL_ANNOT_FILE_PATH = 'data\\LFW_SoftBiometrics\\files\\LFW_ManualAnnotations.txt'
 
 
 id2feat = load_lfwsoft_annot_per_id(MANUAL_ANNOT_FILE_PATH)
-gallery_id, gallery_feats, probe_id, probe_feats = create_geallery_probe_sets(id2feat)
+gallery_id, gallery_feats, probe_id, probe_feats = create_gallery_probe_sets(id2feat)
 
 gallery_feats = np.array(gallery_feats)
 print(len(np.unique(gallery_feats, axis=0)))
